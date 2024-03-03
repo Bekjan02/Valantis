@@ -1,0 +1,19 @@
+@tailwind;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 15px;
+}
+
+.card {
+  width: 400px;
+  border: 1px solid yellow;
+  padding: 5px;
+}
