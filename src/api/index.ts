@@ -1,13 +1,12 @@
 import axios, { AxiosResponse } from 'axios';
 
-import { BASE_URL } from 'constants/index';
 import { IGetIds, IGetItems } from 'types/index';
 import { IGetFilterItems } from 'types/requests';
 
 import { generateHash } from 'utils';
 
 const axiosInstance = axios.create({
-  baseURL: BASE_URL,
+  baseURL: import.meta.env.VITE_APP_API_URL,
   headers: {
     'Content-Type': 'application/json',
     'X-Auth': generateHash(import.meta.env.VITE_APP_URL_PASSWORD),
